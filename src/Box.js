@@ -13,7 +13,10 @@ class Box extends Component {
     }
 
     changeColor() {
-        let newColor = choice(this.props.allColors)
+        let newColor;
+        do {
+            newColor = choice(this.props.allColors);
+        } while (newColor === this.state.color)
         this.setState({ color: newColor })
     }
 
