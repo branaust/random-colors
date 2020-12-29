@@ -6,7 +6,6 @@ class Box extends Component {
     constructor(props) {
         super(props);
         this.state = { color: choice(this.props.colors) }
-        this.handleClick = this.handleClick.bind(this)
     }
 
     changeColor() {
@@ -17,7 +16,7 @@ class Box extends Component {
         this.setState({ color: newColor })
     }
 
-    handleClick() {
+    handleClick = () => {
         this.changeColor()
     }
 
