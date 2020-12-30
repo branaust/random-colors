@@ -16,6 +16,7 @@ class Box extends Component {
         this.setState({ color: newColor })
     }
 
+    // New Binding Method
     handleClick = () => {
         this.changeColor()
     }
